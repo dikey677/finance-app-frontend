@@ -1,0 +1,149 @@
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .registrationForm {
+    margin-top: 360px;
+    margin-left: 114px;
+
+    &__form {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 540px;
+      height: 616px;
+      background: #ffffff;
+      border-radius: 20px;
+    }
+
+    &__form::after {
+      content: "";
+      position: absolute;
+      width: 409px;
+      height: 0px;
+      left: 68px;
+      top: 322px;
+      border-radius: 4px;
+      border-bottom: 4px solid #e5f1ef;
+    }
+
+    &__form::before {
+      content: "";
+      position: absolute;
+      width: 183px;
+      height: 0px;
+      left: 64px;
+      top: 322px;
+      border-bottom: 4px solid #24cca7;
+      border-radius: 5px;
+      box-shadow: 0px 1px 8px rgba(36, 204, 167, 0.5);
+      z-index: 1;
+    }
+
+    &__list {
+      display: flex;
+      list-style-type: none;
+      margin-top: 40px;
+      margin-bottom: 50px;
+    }
+
+    &__item:first-child {
+      margin-right: 20px;
+    }
+
+    &__wallet {
+      width: 121px;
+      height: 40px;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 45px;
+      display: flex;
+      align-items: center;
+      color: #000000;
+    }
+
+    &__button {
+      width: 300px;
+      height: 50px;
+      border-radius: 20px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+      text-align: center;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-color: #4a56e2;
+      color: #4a56e2;
+      background-color: transparent;
+      transition: 300ms;
+      display: block;
+      margin-top: 20px;
+      text-transform: uppercase;
+    }
+
+    &__button:nth-last-of-type(2) {
+      background: #24cca7;
+      border: none;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+      text-align: center;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-top: 50px;
+    }
+
+    &__button:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+
+    &__inputEmail {
+      background-image: url(../../image/SVG/Email.svg);
+      background-repeat: no-repeat;
+    }
+
+    &__inputPass {
+      background-image: url(../../image/SVG/Password.svg);
+      background-repeat: no-repeat;
+    }
+
+    &__inputConfPass {
+      background-image: url(../../image/SVG/Password.svg);
+      background-repeat: no-repeat;
+    }
+
+    &__inputName {
+      background-image: url(../../image/SVG/Account.svg);
+      background-repeat: no-repeat;
+    }
+
+    &__input--all {
+      width: 410px;
+      height: 34px;
+      background-position: 11px 3px;
+      border: none;
+      border-bottom: 1px solid #e0e0e0;
+      padding-left: 55px;
+    }
+
+    &__input--all:focus {
+      outline: 3px solid #24cca7;
+      border-radius: 5px;
+    }
+
+    &__input--all:not(&__inputName) {
+      margin-bottom: 40px;
+    }
+
+    &__input--all::placeholder {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+      color: #bdbdbd;
+    }
+  }
+}

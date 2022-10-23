@@ -1,0 +1,55 @@
+@media screen and (min-width: 768px) {
+  .registrationPage {
+    display: flex;
+    width: 1280px;
+    height: 720px;
+    margin: 50px auto;
+    background: #e7eaf2;
+
+    &__container {
+      position: relative;
+      text-align: center;
+      align-items: center;
+      width: 560px;
+    }
+
+    &__imgEllipsePurple {
+      position: absolute;
+      left: 0;
+      top: 387px;
+      fill: #c5baff;
+    }
+
+    &__imgEllipseCoral {
+      position: absolute;
+      fill: #ffd8d0;
+      top: 0;
+      left: 724px;
+    }
+
+    &__imgGroup {
+      position: absolute;
+      z-index: 1;
+      top: 153px;
+      left: 90px;
+      width: 410;
+      height: 413px;
+    }
+
+    &__title {
+      position: absolute;
+      width: 187px;
+      height: 45px;
+      left: 200px;
+      top: 597px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 45px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #000000;
+    }
+  }
+}

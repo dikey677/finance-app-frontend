@@ -1,0 +1,49 @@
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .registrationPage {
+    position: relative;
+    width: 768px;
+    height: 1024px;
+    background: #e7eaf2;
+    display: flex;
+    flex-direction: column;
+
+    &__imgEllipsePurple {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      fill: #c5baff;
+    }
+
+    &__imgGroup {
+      position: absolute;
+      width: 274px;
+      height: 250px;
+      left: 114px;
+      top: 60px;
+    }
+
+    &__imgEllipseCoral {
+      position: absolute;
+      fill: #ffd8d0;
+      width: 377px;
+      right: 0;
+      top: 0;
+    }
+
+    &__title {
+      position: absolute;
+      align-items: center;
+      text-align: center;
+      color: #000000;
+      width: 187px;
+      height: 45px;
+      left: 428px;
+      top: 163px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 45px;
+      display: flex;
+    }
+  }
+}
