@@ -1,9 +1,9 @@
-import RegistrationForm from "../components/RegistrationForm";
+import LoginForm from "../components/LoginForm";
 import { ReactComponent as EllipsePurple } from "../image/SVG/EllipsePurple.svg";
 import { ReactComponent as GroupSignUp } from "../image/SVG/GroupSignUp.svg";
 import { ReactComponent as EllipseСoral } from "../image/SVG/EllipseCoral.svg";
 
-const RegistrationPage = () => {
+const LoginPage = () => {
   return (
     <div className="signPage">
       <div className="signPage__container">
@@ -12,9 +12,9 @@ const RegistrationPage = () => {
         <EllipseСoral className="signPage__imgEllipseCoral" />
         <title className="signPage__title">Finance App</title>
       </div>
-      <RegistrationForm />
+      <LoginForm />
     </div>
   );
 };
 
-export default RegistrationPage;
+export default LoginPage;

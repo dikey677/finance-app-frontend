@@ -1,49 +1,6 @@
 import { ReactComponent as Wallet } from "../image/SVG/Wallet.svg";
-import { useFormik } from "formik";
 
-const validate = (values) => {
-  const errors = {};
-
-  if (!values.name) {
-    errors.name = "Required";
-  } else if (1 > values.name.length > 12) {
-    errors.name = "Must be 15 characters or less";
-  }
-
-  if (!values.pass) {
-    errors.pass = "Required";
-  } else if (values.pass.length > 20) {
-    errors.pass = "Must be 20 characters or less";
-  }
-
-  if (!values.confPass) {
-    errors.confPass = "Required";
-  } else if (values.confPass.length > 20) {
-    errors.confPass = "Must be 20 characters or less";
-  }
-
-  if (!values.email) {
-    errors.email = "Required";
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = "Invalid email address";
-  }
-
-  return errors;
-};
-
-const RegistrationForm = () => {
-  const formik = useFormik({
-    initialValues: {
-      email: "",
-      pass: "",
-      confPass: "",
-      name: "",
-    },
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
-    },
-  });
-
+const LoginForm = () => {
   return (
     <div className="signForm">
       <form className="signForm__form">
@@ -78,14 +35,14 @@ const RegistrationForm = () => {
         />
 
         <button type="submit" className="signForm__button">
-          Регистрация
+          Вход
         </button>
         <button type="button" className="signForm__button">
-          Вход
+          Регистрация
         </button>
       </form>
     </div>
   );
 };
 
-export default RegistrationForm;
+export default LoginForm;

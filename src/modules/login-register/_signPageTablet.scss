@@ -1,11 +1,10 @@
-@media screen and (min-width: 480px) and (max-width: 768px) {
-  .registrationPage {
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .signPage {
     position: relative;
-    width: 768px;
-    height: 1024px;
     background: #e7eaf2;
     display: flex;
     flex-direction: column;
+    width: 768px;
 
     &__imgEllipsePurple {
       position: absolute;

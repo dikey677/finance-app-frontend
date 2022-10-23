@@ -1,5 +1,7 @@
 @import "./partials/base";
-@import "./modules//registration/registrationFormDesktop";
-@import "./modules//registration/registrationPageDesktop";
-@import "./modules//registration/registrationFormTablet";
-@import "./modules//registration/registrationPageTablet";
+@import "./modules/login-register/signFormDesktop";
+@import "./modules/login-register/signPageDesktop";
+@import "./modules/login-register/signFormTablet";
+@import "./modules/login-register/signPageTablet";
+@import "./modules/login-register/signFormMobile";
+@import "./modules/login-register/signPageMobile";
