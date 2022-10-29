@@ -35,6 +35,15 @@
       height: 413px;
     }
 
+    &__imgGroup--login {
+      position: absolute;
+      z-index: 1;
+      top: 150px;
+      left: 76px;
+      width: 435px;
+      height: 420px;
+    }
+
     &__title {
       position: absolute;
       width: 187px;

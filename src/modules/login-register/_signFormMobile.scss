@@ -8,6 +8,17 @@
       width: 320px;
       height: 568px;
       background: #ffffff;
+      overflow: hidden;
+    }
+
+    &__form--login {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 320px;
+      height: 568px;
+      background: #ffffff;
     }
 
     &__form::after {
@@ -74,7 +85,25 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       border-color: #4a56e2;
-      color: #4a56e2;
+      background-color: transparent;
+      transition: 300ms;
+      display: block;
+      margin-top: 20px;
+      text-transform: uppercase;
+    }
+
+    &__button--login {
+      width: 280px;
+      height: 50px;
+      border-radius: 20px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+      text-align: center;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-color: #4a56e2;
       background-color: transparent;
       transition: 300ms;
       display: block;
@@ -96,9 +125,32 @@
       margin-top: 40px;
     }
 
+    &__button--login:nth-last-of-type(2) {
+      background: #24cca7;
+      border: none;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+      text-align: center;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+
     &__button:hover {
       transform: scale(1.05);
       cursor: pointer;
+    }
+
+    &__button--login:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+
+    &__button--link {
+      text-decoration: none;
+      color: #4a56e2;
     }
 
     &__inputEmail {

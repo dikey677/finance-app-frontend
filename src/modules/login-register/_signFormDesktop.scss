@@ -2,6 +2,8 @@
   .signForm {
     background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(25px);
+    width: 720px;
+    height: 720px;
 
     &__form {
       position: relative;
@@ -11,6 +13,18 @@
       width: 540px;
       height: 616px;
       margin: 52px 85px 52px 95px;
+      background: #ffffff;
+      border-radius: 20px;
+    }
+
+    &__form--login {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 540px;
+      height: 468px;
+      margin: 136px 85px 116px 95px;
       background: #ffffff;
       border-radius: 20px;
     }
@@ -74,7 +88,25 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       border-color: #4a56e2;
-      color: #4a56e2;
+      background-color: transparent;
+      transition: 300ms;
+      display: block;
+      margin-top: 20px;
+      text-transform: uppercase;
+    }
+
+    &__button--login {
+      width: 300px;
+      height: 50px;
+      border-radius: 20px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+      text-align: center;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-color: #4a56e2;
       background-color: transparent;
       transition: 300ms;
       display: block;
@@ -96,7 +128,31 @@
       margin-top: 50px;
     }
 
+    &__button--login:nth-last-of-type(2) {
+      background: #24cca7;
+      border: none;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+      text-align: center;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    &__button--link {
+      text-decoration: none;
+      color: #4a56e2;
+    }
+
     &__button:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+
+    &__button--login:hover {
       transform: scale(1.05);
       cursor: pointer;
     }

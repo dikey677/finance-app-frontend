@@ -1,9 +1,10 @@
 import { ReactComponent as Wallet } from "../image/SVG/Wallet.svg";
+import { Link } from "react-router-dom";
 
 const LoginForm = () => {
   return (
     <div className="signForm">
-      <form className="signForm__form">
+      <form className="signForm__form--login">
         <ul className="signForm__list">
           <li className="signForm__item">
             <Wallet />
@@ -23,22 +24,14 @@ const LoginForm = () => {
           type="password"
           placeholder="Пароль"
         />
-        <input
-          className="signForm__inputConfPass signForm__input--all"
-          type="password"
-          placeholder="Подтвердите пароль"
-        />
-        <input
-          className="signForm__inputName signForm__input--all"
-          type="name"
-          placeholder="Ваше имя"
-        />
 
-        <button type="submit" className="signForm__button">
+        <button type="submit" className="signForm__button--login">
           Вход
         </button>
-        <button type="button" className="signForm__button">
-          Регистрация
+        <button type="button" className="signForm__button--login">
+          <Link className="signForm__button--link" to="/signup">
+            Регистрация
+          </Link>
         </button>
       </form>
     </div>

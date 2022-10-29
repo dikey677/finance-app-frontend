@@ -1,5 +1,6 @@
 import { ReactComponent as Wallet } from "../image/SVG/Wallet.svg";
 import { useFormik } from "formik";
+import { Link } from "react-router-dom";
 
 const validate = (values) => {
   const errors = {};
@@ -81,7 +82,9 @@ const RegistrationForm = () => {
           Регистрация
         </button>
         <button type="button" className="signForm__button">
-          Вход
+          <Link className="signForm__button--link" to="/signin">
+            Вход
+          </Link>
         </button>
       </form>
     </div>

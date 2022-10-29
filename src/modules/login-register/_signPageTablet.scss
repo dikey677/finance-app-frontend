@@ -5,6 +5,8 @@
     display: flex;
     flex-direction: column;
     width: 768px;
+    height: 1024px;
+    overflow: hidden;
 
     &__imgEllipsePurple {
       position: absolute;
@@ -21,12 +23,22 @@
       top: 60px;
     }
 
+    &__imgGroup--login {
+      position: absolute;
+      width: 260px;
+      height: 250px;
+      left: 114px;
+      top: 60px;
+    }
+
     &__imgEllipseCoral {
+      display: block;
       position: absolute;
       fill: #ffd8d0;
-      width: 377px;
-      right: 0;
-      top: 0;
+      width: 618px;
+      height: 547px;
+      left: 400px;
+      top: -85px;
     }
 
     &__title {
