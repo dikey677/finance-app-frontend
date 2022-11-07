@@ -53,7 +53,8 @@
       z-index: 1;
     }
 
-    &__list {
+    &__list--login,
+    &__list--register {
       display: flex;
       list-style-type: none;
       margin-top: 40px;
@@ -76,75 +77,47 @@
       color: #000000;
     }
 
-    &__button {
-      width: 300px;
-      height: 50px;
-      border-radius: 20px;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 27px;
-      text-align: center;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      border-color: #4a56e2;
-      background-color: transparent;
-      transition: 300ms;
-      display: block;
-      margin-top: 20px;
-      text-transform: uppercase;
-    }
-
-    &__button--login {
-      width: 300px;
-      height: 50px;
-      border-radius: 20px;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 27px;
-      text-align: center;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      border-color: #4a56e2;
-      background-color: transparent;
-      transition: 300ms;
-      display: block;
-      margin-top: 20px;
-      text-transform: uppercase;
-    }
-
-    &__button:nth-last-of-type(2) {
-      background: #24cca7;
-      border: none;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 27px;
-      text-align: center;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #ffffff;
-      margin-top: 50px;
-    }
-
-    &__button--login:nth-last-of-type(2) {
-      background: #24cca7;
-      border: none;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 27px;
-      text-align: center;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #ffffff;
+    &__link {
       text-decoration: none;
+    }
+
+    &__button {
+      background: #24cca7;
+      border: none;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+      text-align: center;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #ffffff;
+      width: 300px;
+      height: 50px;
+      transition: 300ms;
+      border-radius: 20px;
     }
 
     &__button--link {
+      width: 300px;
+      height: 50px;
+      border-radius: 20px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+      text-align: center;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-color: #4a56e2;
+      background-color: transparent;
+      transition: 300ms;
+      display: block;
+      margin-top: 20px;
+      text-transform: uppercase;
       text-decoration: none;
       color: #4a56e2;
+      transition: 300ms;
     }
 
     &__button:hover {
@@ -152,7 +125,7 @@
       cursor: pointer;
     }
 
-    &__button--login:hover {
+    &__button--link:hover {
       transform: scale(1.05);
       cursor: pointer;
     }
@@ -175,6 +148,7 @@
     &__inputName {
       background-image: url(../../image/SVG/Account.svg);
       background-repeat: no-repeat;
+      margin-bottom: 50px;
     }
 
     &__input--all {

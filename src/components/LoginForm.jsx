@@ -5,7 +5,7 @@ const LoginForm = () => {
   return (
     <div className="signForm">
       <form className="signForm__form--login">
-        <ul className="signForm__list">
+        <ul className="signForm__list--login">
           <li className="signForm__item">
             <Wallet />
           </li>
@@ -25,14 +25,15 @@ const LoginForm = () => {
           placeholder="Пароль"
         />
 
-        <button type="submit" className="signForm__button--login">
+        <button type="submit" className="signForm__button">
           Вход
         </button>
-        <button type="button" className="signForm__button--login">
-          <Link className="signForm__button--link" to="/signup">
+
+        <Link className="signForm__link" to="/signup">
+          <button type="button" className="signForm__button--link">
             Регистрация
-          </Link>
-        </button>
+          </button>
+        </Link>
       </form>
     </div>
   );

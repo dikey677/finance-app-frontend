@@ -19,6 +19,7 @@
       width: 320px;
       height: 568px;
       background: #ffffff;
+      padding-top: 110px;
     }
 
     &__form::after {
@@ -45,7 +46,17 @@
       z-index: 1;
     }
 
-    &__list {
+    &__list--login {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 120px;
+      height: 30px;
+      list-style-type: none;
+      margin-bottom: 50px;
+    }
+
+    &__list--register {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -73,6 +84,10 @@
       color: #000000;
     }
 
+    &__link {
+      text-decoration: none;
+    }
+
     &__button {
       width: 280px;
       height: 50px;
@@ -84,15 +99,16 @@
       text-align: center;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      border-color: #4a56e2;
-      background-color: transparent;
+      border: none;
+      color: #ffffff;
+      background: #24cca7;
       transition: 300ms;
       display: block;
-      margin-top: 20px;
+      // margin-top: 20px;
       text-transform: uppercase;
     }
 
-    &__button--login {
+    &__button--link {
       width: 280px;
       height: 50px;
       border-radius: 20px;
@@ -104,6 +120,7 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       border-color: #4a56e2;
+      color: #4a56e2;
       background-color: transparent;
       transition: 300ms;
       display: block;
@@ -111,46 +128,14 @@
       text-transform: uppercase;
     }
 
-    &__button:nth-last-of-type(2) {
-      background: #24cca7;
-      border: none;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 27px;
-      text-align: center;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #ffffff;
-      margin-top: 40px;
-    }
-
-    &__button--login:nth-last-of-type(2) {
-      background: #24cca7;
-      border: none;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 27px;
-      text-align: center;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #ffffff;
-    }
-
     &__button:hover {
       transform: scale(1.05);
       cursor: pointer;
     }
 
-    &__button--login:hover {
+    &__button--link:hover {
       transform: scale(1.05);
       cursor: pointer;
-    }
-
-    &__button--link {
-      text-decoration: none;
-      color: #4a56e2;
     }
 
     &__inputEmail {
@@ -171,6 +156,7 @@
     &__inputName {
       background-image: url(../../image/SVG/Account.svg);
       background-repeat: no-repeat;
+      margin-bottom: 40px;
     }
 
     &__input--all {
