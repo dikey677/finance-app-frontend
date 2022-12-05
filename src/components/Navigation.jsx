@@ -1,43 +1,107 @@
 import { ReactComponent as Currency } from "../image/SVG/Currency.svg";
 import { ReactComponent as Statistic } from "../image/SVG/Statistic.svg";
+import { ReactComponent as StatTablet } from "../image/SVG/statTablet.svg";
 import { ReactComponent as Home } from "../image/SVG/Home.svg";
-import { Link, Routes, Route } from "react-router-dom";
+import { ReactComponent as HomeTablet } from "../image/SVG/homeTablet.svg";
+import { Link, Routes, Route, Outlet } from "react-router-dom";
 import CurrencyComponent from "../components/Currency";
 import HomeTab from "../components/HomeTab";
+import React, { Fragment } from "react";
+import Media from "react-media";
 
 const Navigation = () => {
   return (
     <>
-      <ul className="nav-list">
-        <li className="nav-list__item">
-          <Link to="home">
-            <button type="button" className="nav-list__button ">
-              <Home />
-            </button>
-          </Link>
-        </li>
-        <li className="nav-list__item">
-          <Link to="diagram">
-            <button type="button" className="nav-list__button">
-              <Statistic />
-            </button>
-          </Link>
-        </li>
-        <li className="anv-list__item">
-          <Link to="currency">
-            <button type="button" className="nav-list__button">
-              <Currency />
-            </button>
-          </Link>
-        </li>
-      </ul>
+      <Media
+        queries={{
+          small: "(max-width: 480px)",
+          medium: "(min-width: 481px) and (max-width: 768px)",
+          large: "(min-width: 769px)",
+        }}
+      >
+        {(matches) => (
+          <Fragment>
+            {
+              // Media screen and (max-width: 480px)
+              matches.small && (
+                <>
+                  <ul className="nav-list">
+                    <li className="nav-list__item">
+                      <Link to="home">
+                        <button type="button" className="nav-list__button ">
+                          <Home />
+                        </button>
+                      </Link>
+                    </li>
+                    <li className="nav-list__item">
+                      <Link to="diagram">
+                        <button type="button" className="nav-list__button">
+                          <Statistic />
+                        </button>
+                      </Link>
+                    </li>
+                    <li className="nav-list__item">
+                      <Link to="currency">
+                        <button type="button" className="nav-list__button">
+                          <Currency />
+                        </button>
+                      </Link>
+                    </li>
+                  </ul>
 
-      <Routes>
-        <Route path="home" element={<HomeTab />} />
-        <Route path="currency" element={<CurrencyComponent />} />
-      </Routes>
+                  <Routes>
+                    <Route path="home" element={<HomeTab />} />
+                    <Route path="currency" element={<CurrencyComponent />} />
+                  </Routes>
 
-      {/* <Outlet /> */}
+                  <Outlet />
+                </>
+              )
+            }
+
+            {
+              // Media screen and (min-width: 481px) and (max-width: 768px)
+              matches.medium && (
+                <div className="nav">
+                  <div className="nav-tablet">
+                    <ul className="nav-list">
+                      <li className="nav-list__item">
+                        <Link to="home" className="nav-list__item-link">
+                          <button type="button" className="nav-list__button ">
+                            <HomeTablet />
+                          </button>
+                          <p className="nav-list__home">Главная</p>
+                        </Link>
+                      </li>
+                      <li className="nav-list__item">
+                        <Link to="diagram" className="nav-list__item-link">
+                          <button type="button" className="nav-list__button">
+                            <StatTablet />
+                          </button>
+                          <p className="nav-list__stat">Статистика</p>
+                        </Link>
+                      </li>
+                    </ul>
+
+                    <HomeTab />
+                  </div>
+
+                  <div className="nav-currency">
+                    <CurrencyComponent />
+                  </div>
+
+                  <Routes>
+                    {/* <Route path="home" element={<HomeTab />} /> */}
+                    {/* <Route path="currency" element={<CurrencyComponent />} /> */}
+                  </Routes>
+
+                  <Outlet />
+                </div>
+              )
+            }
+          </Fragment>
+        )}
+      </Media>
     </>
   );
 };

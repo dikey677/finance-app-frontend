@@ -1,11 +1,11 @@
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
   .chart {
-    width: 280px;
+    width: 334px;
     height: 80px;
     border-radius: 30px;
     background-color: #ffffff;
     padding: 8px 30px 13px 30px;
-    margin: 0 auto;
+    margin-top: 20px;
 
     &__title {
       width: 81px;

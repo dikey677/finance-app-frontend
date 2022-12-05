@@ -1,0 +1,63 @@
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .header {
+    position: absolute;
+    display: flex;
+    max-width: 768px;
+    width: 768px;
+    height: 80px;
+    background: #ffffff;
+    padding: 15px 20px;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+
+    &__wallet {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__logo {
+      width: 30px;
+      height: 30px;
+    }
+
+    &__title {
+      color: #000000;
+      margin-left: 16px;
+    }
+
+    &__user {
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      width: 80px;
+      height: 24px;
+      left: 192px;
+      top: 18px;
+      // font-family: "Circe";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+      text-align: right;
+      color: #bdbdbd;
+    }
+
+    &__logout {
+      width: 18px;
+      height: 18px;
+      border: none;
+      fill: #bdbdbd;
+      background-color: transparent;
+      transition: 250ms;
+      margin-left: 10px;
+    }
+
+    &__logout:hover {
+      fill: black;
+      cursor: pointer;
+    }
+  }
+}

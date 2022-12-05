@@ -1,58 +1,62 @@
-.header {
-  position: fixed;
-  display: flex;
-  width: 320px;
-  height: 60px;
-  background: #ffffff;
-  padding: 15px 20px;
-  align-items: center;
-  justify-content: space-between;
-
-  &__wallet {
+@media screen and (max-width: 480px) {
+  .header {
+    position: fixed;
     display: flex;
+    width: 320px;
+    height: 60px;
+    background: #ffffff;
+    padding: 15px 20px;
     align-items: center;
-    justify-content: center;
-  }
+    justify-content: space-between;
+    top: 0;
+    left: -1px;
 
-  &__logo {
-    width: 30px;
-    height: 30px;
-  }
+    &__wallet {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-  &__title {
-    color: #000000;
-    margin-left: 16px;
-  }
+    &__logo {
+      width: 30px;
+      height: 30px;
+    }
 
-  &__user {
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    width: 80px;
-    height: 24px;
-    left: 192px;
-    top: 18px;
-    // font-family: "Circe";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 27px;
-    text-align: right;
-    color: #bdbdbd;
-  }
+    &__title {
+      color: #000000;
+      margin-left: 16px;
+    }
 
-  &__logout {
-    width: 18px;
-    height: 18px;
-    border: none;
-    fill: #bdbdbd;
-    background-color: transparent;
-    transition: 250ms;
-    margin-left: 10px;
-  }
+    &__user {
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      width: 80px;
+      height: 24px;
+      left: 192px;
+      top: 18px;
+      // font-family: "Circe";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+      text-align: right;
+      color: #bdbdbd;
+    }
 
-  &__logout:hover {
-    fill: black;
-    cursor: pointer;
+    &__logout {
+      width: 18px;
+      height: 18px;
+      border: none;
+      fill: #bdbdbd;
+      background-color: transparent;
+      transition: 250ms;
+      margin-left: 10px;
+    }
+
+    &__logout:hover {
+      fill: black;
+      cursor: pointer;
+    }
   }
 }
