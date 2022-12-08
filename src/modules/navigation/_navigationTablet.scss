@@ -1,8 +1,21 @@
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .nav {
     display: flex;
     margin: 20px 40px 40px 40px;
-    justify-content: space-between;
+    // justify-content: space-between;
+    max-width: 688px;
+    width: 100%;
+
+    &-tablet {
+      max-width: 334px;
+      width: 100%;
+      margin-right: 20px;
+    }
+
+    &-currency {
+      max-width: 334px;
+      width: 100%;
+    }
 
     &-list {
       display: flex;
@@ -32,18 +45,6 @@
         color: #000000;
       }
 
-      &__home:focus,
-      &__stat:focus {
-        // font-family: "Poppins";
-        font-style: normal;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 27px;
-        display: flex;
-        align-items: center;
-        color: #000000;
-      }
-
       &__button {
         width: 18px;
         height: 18px;
@@ -55,6 +56,22 @@
       }
 
       &__button:focus {
+        fill: #4a56e2;
+        filter: drop-shadow(0px 3px 10px rgba(74, 86, 226, 0.5));
+      }
+
+      &__button:focus ~ p {
+        color: black;
+        // font-family: "Poppins";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 27px;
+        display: flex;
+        align-items: center;
+      }
+
+      &__home:focus ~ .nav-list__button {
         fill: #4a56e2;
         filter: drop-shadow(0px 3px 10px rgba(74, 86, 226, 0.5));
       }

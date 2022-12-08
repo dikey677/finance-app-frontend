@@ -14,15 +14,15 @@ const Navigation = () => {
     <>
       <Media
         queries={{
-          small: "(max-width: 480px)",
-          medium: "(min-width: 481px) and (max-width: 768px)",
-          large: "(min-width: 769px)",
+          small: "(min-width: 320px) and (max-width: 767px)",
+          medium: "(min-width: 768px) and (max-width: 1199px)",
+          large: "(min-width: 1200px)",
         }}
       >
         {(matches) => (
           <Fragment>
             {
-              // Media screen and (max-width: 480px)
+              // Media screen and (min-width: 320px) and (max-width: 767px)
               matches.small && (
                 <>
                   <ul className="nav-list">
@@ -60,7 +60,7 @@ const Navigation = () => {
             }
 
             {
-              // Media screen and (min-width: 481px) and (max-width: 768px)
+              // Media screen and (min-width: 768px) and (max-width: 1199px)
               matches.medium && (
                 <div className="nav">
                   <div className="nav-tablet">

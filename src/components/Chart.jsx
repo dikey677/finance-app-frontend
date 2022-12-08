@@ -7,9 +7,9 @@ const Chart = () => {
     <>
       <Media
         queries={{
-          small: "(max-width: 480px)",
-          medium: "(min-width: 481px) and (max-width: 768px)",
-          large: "(min-width: 769px)",
+          small: "(min-width: 320px) and (max-width: 767px)",
+          medium: "(min-width: 768px) and (max-width: 1199px)",
+          large: "(min-width: 1200px)",
         }}
       >
         {(matches) => (

@@ -15,9 +15,9 @@ const TableCurrency = ({ columns, data }) => {
     <>
       <Media
         queries={{
-          small: "(max-width: 480px)",
-          medium: "(min-width: 481px) and (max-width: 768px)",
-          large: "(min-width: 769px)",
+          small: "(min-width: 320px) and (max-width: 767px)",
+          medium: "(min-width: 768px) and (max-width: 1199px)",
+          large: "(min-width: 1200px)",
         }}
       >
         {(matches) => (
@@ -127,7 +127,9 @@ const TableCurrency = ({ columns, data }) => {
                 <table
                   {...getTableProps()}
                   style={{
-                    width: "334px",
+                    maxWidth: "334px",
+                    width: "100%",
+
                     height: "111px",
                     background: "#4A56E2",
                     borderCollapse: "collapse",
@@ -210,7 +212,12 @@ const TableCurrency = ({ columns, data }) => {
                     })}
                   </tbody>
                 </table>
-                <VectorTable style={{}} />
+                <VectorTable
+                  style={{
+                    position: "absolute",
+                    top: "163px",
+                  }}
+                />
               </>
             )}
             {matches.large && (
