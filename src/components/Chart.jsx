@@ -15,7 +15,7 @@ const Chart = () => {
         {(matches) => (
           <Fragment>
             {
-              // Media screen and (max-width: 480px)
+              // Media screen and (min-width: 320px) and (max-width: 767px)c
               matches.small && (
                 <>
                   <div className="chart">
@@ -30,7 +30,7 @@ const Chart = () => {
               )
             }
             {
-              // Media screen and (min-width: 481px) and (max-width: 768px)
+              // Media screen and (min-width: 768px) and (max-width: 1199px)
               matches.medium && (
                 <div className="chart">
                   <p className="chart__title">Ваш баланс</p>

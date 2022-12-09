@@ -3,12 +3,25 @@
     position: relative;
     margin: 100px auto;
     padding-top: 80px;
-    max-width: 768px;
-    width: 100%;
-    max-height: 1024px;
+    width: 768px;
     height: 1024px;
-    overflow: auto;
     background: rgba(255, 255, 255, 0.4);
-    // backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+    overflow: hidden;
+
+    &__ellipseCoral {
+      display: block;
+      position: absolute;
+      top: -20px;
+      right: -200px;
+      z-index: -1;
+      fill: #ffd8d0;
+    }
+
+    &__ellipsePurple {
+      position: absolute;
+      bottom: 0;
+      z-index: -1;
+    }
   }
 }

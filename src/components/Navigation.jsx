@@ -6,6 +6,7 @@ import { ReactComponent as HomeTablet } from "../image/SVG/homeTablet.svg";
 import { Link, Routes, Route, Outlet } from "react-router-dom";
 import CurrencyComponent from "../components/Currency";
 import HomeTab from "../components/HomeTab";
+import Table from "../components/Table";
 import React, { Fragment } from "react";
 import Media from "react-media";
 
@@ -62,41 +63,41 @@ const Navigation = () => {
             {
               // Media screen and (min-width: 768px) and (max-width: 1199px)
               matches.medium && (
-                <div className="nav">
-                  <div className="nav-tablet">
-                    <ul className="nav-list">
-                      <li className="nav-list__item">
-                        <Link to="home" className="nav-list__item-link">
-                          <button type="button" className="nav-list__button ">
-                            <HomeTablet />
-                          </button>
-                          <p className="nav-list__home">Главная</p>
-                        </Link>
-                      </li>
-                      <li className="nav-list__item">
-                        <Link to="diagram" className="nav-list__item-link">
-                          <button type="button" className="nav-list__button">
-                            <StatTablet />
-                          </button>
-                          <p className="nav-list__stat">Статистика</p>
-                        </Link>
-                      </li>
-                    </ul>
+                <>
+                  <div className="nav">
+                    <div className="nav-tablet">
+                      <ul className="nav-list">
+                        <li className="nav-list__item">
+                          <Link to="home" className="nav-list__item-link">
+                            <button type="button" className="nav-list__button ">
+                              <HomeTablet />
+                            </button>
+                            <p className="nav-list__home">Главная</p>
+                          </Link>
+                        </li>
+                        <li className="nav-list__item">
+                          <Link to="diagram" className="nav-list__item-link">
+                            <button type="button" className="nav-list__button">
+                              <StatTablet />
+                            </button>
+                            <p className="nav-list__stat">Статистика</p>
+                          </Link>
+                        </li>
+                      </ul>
 
-                    <HomeTab />
+                      <HomeTab />
+                    </div>
+
+                    <div className="nav-currency">
+                      <CurrencyComponent />
+                    </div>
                   </div>
-
-                  <div className="nav-currency">
-                    <CurrencyComponent />
-                  </div>
-
                   <Routes>
-                    {/* <Route path="home" element={<HomeTab />} /> */}
+                    <Route path="home" element={<Table />} />
                     {/* <Route path="currency" element={<CurrencyComponent />} /> */}
                   </Routes>
-
                   <Outlet />
-                </div>
+                </>
               )
             }
           </Fragment>
