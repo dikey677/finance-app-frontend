@@ -2,6 +2,7 @@ import React, { useMemo, Fragment } from "react";
 import { useTable } from "react-table";
 import { ReactComponent as Vector } from "../image/SVG/MobileVector.svg";
 import { ReactComponent as VectorTable } from "../image/SVG/VectorTable.svg";
+import { ReactComponent as VectorDesktop } from "../image/SVG/VectorDesktop.svg";
 import Media from "react-media";
 
 const TableCurrency = ({ columns, data }) => {
@@ -226,21 +227,24 @@ const TableCurrency = ({ columns, data }) => {
                 <table
                   {...getTableProps()}
                   style={{
+                    position: "relative",
                     margin: "30px auto",
                     width: "348px",
                     height: "347px",
                     background: "#4A56E2",
                     borderCollapse: "collapse",
                     borderRadius: "30px",
-                    position: "relative",
                   }}
                 >
                   <thead
                     style={{
+                      display: "flex",
+                      alignItems: "center",
                       background: "#6e78e8",
                       height: "50px",
                       borderRadius: "30px 30px 0 0",
-                      display: "table-cell",
+
+                      justifyContent: "space-between",
                     }}
                   >
                     {headerGroups.map((headerGroup) => (
@@ -248,8 +252,10 @@ const TableCurrency = ({ columns, data }) => {
                         {...headerGroup.getHeaderGroupProps()}
                         style={{
                           display: "flex",
-                          width: "73px",
-                          height: "27px",
+                          width: "348px",
+                          paddingLeft: "30px",
+                          paddingRight: "30px",
+                          justifyContent: "space-between",
                         }}
                       >
                         {headerGroup.headers.map((column) => (
@@ -262,7 +268,6 @@ const TableCurrency = ({ columns, data }) => {
                               lineHeight: "27px",
                               textAlign: "center",
                               color: "#FFFFFF",
-                              marginLeft: "20px",
                             }}
                           >
                             {column.render("Header")}
@@ -274,7 +279,8 @@ const TableCurrency = ({ columns, data }) => {
                   <tbody
                     {...getTableBodyProps()}
                     style={{
-                      display: "table-row",
+                      display: "flex",
+                      flexDirection: "column",
                     }}
                   >
                     {rows.map((row) => {
@@ -310,11 +316,11 @@ const TableCurrency = ({ columns, data }) => {
                     })}
                   </tbody>
                 </table>
-                <Vector
+                <VectorDesktop
                   style={{
                     position: "absolute",
-                    left: "19px",
-                    top: "226px",
+                    left: "86px",
+                    top: "447px",
                   }}
                 />
               </>

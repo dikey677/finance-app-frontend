@@ -1,0 +1,89 @@
+@media screen and (min-width: 1200px) {
+  .header {
+    position: absolute;
+    display: flex;
+    width: 1280px;
+    height: 80px;
+    background: #ffffff;
+    padding: 20px 85px;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+
+    &__wallet {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__logo {
+      width: 40px;
+      height: 40px;
+    }
+
+    &__title {
+      color: #000000;
+      margin-left: 16px;
+    }
+
+    &__user {
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      width: 80px;
+      height: 24px;
+      left: 192px;
+      top: 18px;
+      // font-family: "Circe";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+      text-align: right;
+      color: #bdbdbd;
+    }
+
+    &__name::after {
+      content: "";
+      width: 0px;
+      height: 30px;
+      border: 1px solid #bdbdbd;
+      margin-left: 15px;
+    }
+    &__logout {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__button {
+      width: 18px;
+      height: 18px;
+      border: none;
+      fill: #bdbdbd;
+      background-color: transparent;
+      transition: 250ms;
+      margin-left: 15px;
+      margin-right: 10px;
+    }
+
+    .header__exit {
+      // font-family: 'Circe';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+      color: #bdbdbd;
+      transition: 250ms;
+    }
+
+    &__button:focus {
+      fill: black;
+    }
+
+    &__button:focus ~ .header__exit {
+      color: #000000;
+    }
+  }
+}

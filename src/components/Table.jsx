@@ -122,8 +122,65 @@ const Table = () => {
             )
           }
           {
-            // Media screen and (min-width: 768px) and (max-width: 1199px)"
+            // Media screen and (min-width: 768px) and (max-width: 1199px)
             matches.medium && (
+              <table className="table-tablet">
+                <tbody>
+                  <tr>
+                    <th>Дата</th>
+                    <th>Тип</th>
+                    <th>Категория</th>
+                    <th>Комментарий</th>
+                    <th>Сумма</th>
+                    <th>Баланс</th>
+                  </tr>
+                  <tr>
+                    <td>04.01.19</td>
+                    <td>-</td>
+                    <td>Разное</td>
+                    <td>Подарок жене</td>
+                    <td>300.00</td>
+                    <td>6 900.00</td>
+                  </tr>
+                  <tr>
+                    <td>05.01.19</td>
+                    <td>+</td>
+                    <td>Регулярный доход</td>
+                    <td>Бонус за январь</td>
+                    <td>8 000.00</td>
+                    <td>14 900.00</td>
+                  </tr>
+                  <tr>
+                    <td>07.01.19</td>
+                    <td>-</td>
+                    <td>Машина</td>
+                    <td>Масло</td>
+                    <td>1 000.00</td>
+                    <td>13 900.00</td>
+                  </tr>
+                  <tr>
+                    <td>07.01.19</td>
+                    <td>-</td>
+                    <td>Продукты</td>
+                    <td>Овощи на неделю</td>
+                    <td>280.00</td>
+                    <td>13 870.00</td>
+                  </tr>
+                  <tr>
+                    <td>07.01.19</td>
+                    <td>+</td>
+                    <td>Нерегулярный доход</td>
+                    <td>Подарок на др</td>
+                    <td>1 000.00</td>
+                    <td>14 870.00</td>
+                  </tr>
+                </tbody>
+              </table>
+            )
+          }
+          {
+            // Media screen and (min-width: 1200px)
+            matches.large && (
               <table className="table-tablet">
                 <tbody>
                   <tr>

@@ -26,8 +26,19 @@ const DashboardPage = () => {
             )
           }
           {
-            // Media screen and (min-width: 768px) and (max-width: 1199px)"
+            // Media screen and (min-width: 768px) and (max-width: 1199px)
             matches.medium && (
+              <div className="db">
+                <Header />
+                <Navigation />
+                <EllipsePurple className="db__ellipsePurple" />
+                <EllipseСoral className="db__ellipseCoral" />
+              </div>
+            )
+          }
+          {
+            // Media screen and (min-width: 1200px)
+            matches.large && (
               <div className="db">
                 <Header />
                 <Navigation />

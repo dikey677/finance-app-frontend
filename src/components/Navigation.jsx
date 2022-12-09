@@ -59,7 +59,6 @@ const Navigation = () => {
                 </>
               )
             }
-
             {
               // Media screen and (min-width: 768px) and (max-width: 1199px)
               matches.medium && (
@@ -97,6 +96,46 @@ const Navigation = () => {
                     {/* <Route path="currency" element={<CurrencyComponent />} /> */}
                   </Routes>
                   <Outlet />
+                </>
+              )
+            }
+            {
+              // Media screen and (min-width: 1200px)
+              matches.large && (
+                <>
+                  <div className="nav">
+                    <div className="nav-desktop">
+                      <ul className="nav-list">
+                        <li className="nav-list__item">
+                          <Link to="home" className="nav-list__item-link">
+                            <button type="button" className="nav-list__button ">
+                              <HomeTablet />
+                            </button>
+                            <p className="nav-list__home">Главная</p>
+                          </Link>
+                        </li>
+                        <li className="nav-list__item">
+                          <Link to="diagram" className="nav-list__item-link">
+                            <button type="button" className="nav-list__button">
+                              <StatTablet />
+                            </button>
+                            <p className="nav-list__stat">Статистика</p>
+                          </Link>
+                        </li>
+                      </ul>
+
+                      <HomeTab />
+                      <CurrencyComponent />
+                    </div>
+
+                    <div className="nav-linkPage">
+                      <Routes>
+                        <Route path="home" element={<Table />} />
+                        {/* <Route path="currency" element={<CurrencyComponent />} /> */}
+                      </Routes>
+                      <Outlet />
+                    </div>
+                  </div>
                 </>
               )
             }
