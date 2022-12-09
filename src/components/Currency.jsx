@@ -291,7 +291,7 @@ const TableCurrency = ({ columns, data }) => {
                           style={{
                             display: "flex",
                             justifyContent: "space-between",
-                            margin: "10px 20px",
+                            margin: "12px 30px",
                             alignItems: "center",
                           }}
                         >
