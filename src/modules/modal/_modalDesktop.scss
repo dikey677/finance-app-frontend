@@ -1,0 +1,262 @@
+@media screen and (min-width: 1200px) {
+  .modal {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.25);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 500ms;
+
+    &__title {
+      // font-family: "Poppins";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 45px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #000000;
+    }
+
+    &.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    &__content {
+      padding: 40px 64px 60px 66px;
+      width: 540px;
+      height: 617px;
+      background: #ffffff;
+      border-radius: 20px;
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__switch {
+      margin-top: 40px;
+      width: 200px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & label input[type="checkbox"] {
+        position: relative;
+        box-sizing: border-box;
+        width: 80px;
+        height: 40px;
+        appearance: none;
+        outline: none;
+        background: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-radius: 30px;
+        transition: 0.5s;
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+      }
+
+      & label input[type="checkbox"]::before {
+        content: "";
+        position: absolute;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        top: -3px;
+        right: -3px;
+        background: #ff6596;
+        box-shadow: 0px 6px 15px rgba(255, 101, 150, 0.5);
+        background-image: url(../../image/SVG/Negative.svg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        transition: 0.5s;
+      }
+
+      & label input:checked[type="checkbox"]::before {
+        right: 37px;
+        background: #24cca7;
+        box-shadow: 0px 6px 15px rgba(36, 204, 167, 0.5);
+        background-image: url(../../image/SVG/Plus.svg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+      }
+
+      & label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      & label span {
+        margin: 0 16px;
+      }
+    }
+
+    &__profit--checked {
+      // font-family: "Circe";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      color: #24cca7;
+    }
+
+    &__unprofit--checked {
+      // font-family: "Circe";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      color: #ff6596;
+    }
+
+    &__profit,
+    &__unprofit {
+      // font-family: 'Circe';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      color: #e0e0e0;
+    }
+
+    &__select {
+      // -webkit-appearance: none;
+      // appearance: none;
+      margin-top: 40px;
+      width: 410px;
+      height: 34px;
+      outline: transparent;
+      border: none;
+      border-bottom: 1px solid #e0e0e0;
+      transition: 0.5s;
+      cursor: pointer;
+    }
+
+    &__grid {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+      width: 410px;
+      height: 34px;
+    }
+
+    &__comment {
+      margin-top: 40px;
+      width: 410px;
+      height: 34px;
+      outline: transparent;
+      border: none;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 20px 10px;
+
+      &::placeholder {
+        // font-family: "Circe";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        color: #bdbdbd;
+      }
+    }
+
+    &__pay {
+      width: 190px;
+      height: 34px;
+      outline: transparent;
+      border: none;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 20px 10px;
+
+      &::placeholder {
+        text-align: center;
+        // font-family: "Circe";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 27px;
+        color: #bdbdbd;
+      }
+    }
+
+    &__calendar {
+      position: relative;
+      width: 190px;
+      height: 34px;
+      background-image: url(../../image/SVG/Calendar.svg);
+      background-repeat: no-repeat;
+      background-position: 150px 5px;
+      outline: transparent;
+      border: none;
+      border-bottom: 1px solid #e0e0e0;
+
+      // font-family: "Circe";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+      color: #000000;
+      padding: 20px 10px;
+      cursor: pointer;
+    }
+
+    &__button-add,
+    &__button-cancel {
+      width: 300px;
+      height: 50px;
+      border-radius: 20px;
+
+      cursor: pointer;
+    }
+
+    &__button-add {
+      margin-top: 51px;
+      border: 1px solid #24cca7;
+      background: #24cca7;
+      // font-family: "Circe";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+      text-align: center;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #ffffff;
+      transition: 0.2s;
+    }
+
+    &__button-cancel {
+      margin-top: 20px;
+      background: transparent;
+      border: 1px solid #4a56e2;
+      // font-family: 'Circe';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+      text-align: center;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #4a56e2;
+      transition: 0.2s;
+    }
+
+    &__button-cancel:hover,
+    &__button-add:hover {
+      box-shadow: 0 0px 20px 0px rgba(0, 0, 0, 0.2);
+      opacity: 0.6;
+    }
+  }
+}
