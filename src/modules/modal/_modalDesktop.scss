@@ -122,19 +122,17 @@
       color: #ff6596;
     }
 
-    &__profit,
-    &__unprofit {
+    &__unchecked {
       // font-family: 'Circe';
       font-style: normal;
       font-weight: 700;
       font-size: 16px;
       line-height: 24px;
       color: #e0e0e0;
+      transition: 0.2s;
     }
 
     &__select {
-      // -webkit-appearance: none;
-      // appearance: none;
       margin-top: 40px;
       width: 410px;
       height: 34px;
@@ -145,7 +143,16 @@
       cursor: pointer;
     }
 
-    &__grid {
+    &__select::placeholder {
+      // font-family: "Circe";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+      color: #bdbdbd;
+    }
+
+    &__wrapper {
       display: flex;
       justify-content: space-between;
       margin-top: 40px;

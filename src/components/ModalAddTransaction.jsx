@@ -2,14 +2,28 @@ import Media from "react-media";
 import React, { Fragment } from "react";
 import Datetime from "react-datetime";
 import "react-datetime/css/react-datetime.css";
+import Select from "react-select";
 import { useState } from "react";
 
 const ModalAddTransaction = ({ active, setActive }) => {
-  const [date, setDate] = useState(new Date());
   const [checked, setChecked] = useState(false);
-  // const [date, setDate] = useState(new Date());
-  // const [spend, setSpend] = useState(true);
-  // const [comment, setСomment] = useState("");
+
+  const selectOptions = [
+    { value: "1", label: "Основной" },
+    { value: "2", label: "Еда" },
+    { value: "3", label: "Авто" },
+    { value: "4", label: "Развитие" },
+    { value: "5", label: "Дети" },
+    { value: "6", label: "Дом" },
+    { value: "7", label: "Образование" },
+    { value: "8", label: "Остальное" },
+  ];
+
+  const onSubmitForm = (e) => {
+    e.preventDefault();
+    // Здесь выполняется код отправки данных на бэкенд для хранения
+    return setActive(false);
+  };
 
   return (
     <Media
@@ -40,7 +54,7 @@ const ModalAddTransaction = ({ active, setActive }) => {
                   className="modal__content"
                   onClick={(e) => e.stopPropagation()}
                 >
-                  <form className="modal__form">
+                  <form className="modal__form" onSubmit={onSubmitForm}>
                     <p className="modal__title">Добавить транзакцию</p>
 
                     <div className="modal__switch">
@@ -49,24 +63,22 @@ const ModalAddTransaction = ({ active, setActive }) => {
                         <span
                           className={
                             checked
-                              ? "modal__profit--checked modal__unprofit"
-                              : "modal__profit"
+                              ? "modal__profit--checked"
+                              : "modal__unchecked"
                           }
                         >
                           Доход
                         </span>
                         <input
                           type="checkbox"
-                          value={false}
-                          active={checked}
-                          defaultChecked={false}
-                          onClick={() => setChecked(true)}
+                          checked={checked}
+                          onChange={() => setChecked(!checked)}
                         />
                         <span
                           className={
-                            checked
-                              ? "modal__unprofit--checked modal__profit"
-                              : "modal__unprofit"
+                            !checked
+                              ? "modal__unprofit--checked"
+                              : "modal__unchecked"
                           }
                         >
                           Расход
@@ -74,7 +86,13 @@ const ModalAddTransaction = ({ active, setActive }) => {
                       </label>
                     </div>
 
-                    <select
+                    <Select
+                      options={selectOptions}
+                      className="modal__select"
+                      placeholder="Выберите категорию"
+                    />
+
+                    {/* <select
                       className="modal__select"
                       placeholder="Выберите категорию"
                       name="category"
@@ -87,9 +105,9 @@ const ModalAddTransaction = ({ active, setActive }) => {
                       <option value="Дом">Дом</option>
                       <option value="Образование">Образование</option>
                       <option value="Остальное">Остальное</option>
-                    </select>
+                    </select> */}
 
-                    <div className="modal__grid">
+                    <div className="modal__wrapper">
                       <input
                         className="modal__pay"
                         type="text"
@@ -97,7 +115,7 @@ const ModalAddTransaction = ({ active, setActive }) => {
                       />
                       <Datetime
                         inputProps={{ className: "modal__calendar" }}
-                        value={date}
+                        // value={date}
                       />
                     </div>
 
@@ -110,7 +128,11 @@ const ModalAddTransaction = ({ active, setActive }) => {
                     <button type="submit" className="modal__button-add">
                       Добавить
                     </button>
-                    <button type="button" className="modal__button-cancel">
+                    <button
+                      type="button"
+                      className="modal__button-cancel"
+                      onClick={() => setActive(false)}
+                    >
                       Отмена
                     </button>
                   </form>
