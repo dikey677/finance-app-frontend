@@ -1,14 +1,17 @@
 @media screen and (min-width: 1200px) {
   .modal {
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.25);
     position: fixed;
     top: 0;
     left: 0;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.25);
+
     opacity: 0;
     pointer-events: none;
     transition: 500ms;
@@ -31,6 +34,7 @@
     }
 
     &__content {
+      position: relative;
       padding: 40px 64px 60px 66px;
       width: 540px;
       height: 617px;
@@ -132,24 +136,62 @@
       transition: 0.2s;
     }
 
-    &__select {
+    &-select__control {
+      position: relative !important;
       margin-top: 40px;
       width: 410px;
       height: 34px;
-      outline: transparent;
-      border: none;
-      border-bottom: 1px solid #e0e0e0;
-      transition: 0.5s;
-      cursor: pointer;
+
+      border: none !important;
+      border-radius: 0 !important;
+      border-bottom: 1px solid #e0e0e0 !important;
+      transition: 0.5s !important;
+
+      &:focus {
+        border: none !important;
+      }
+
+      &:hover {
+        cursor: pointer !important;
+      }
     }
 
-    &__select::placeholder {
+    &-select__control--is-focused {
+      box-shadow: none !important;
+      overflow: hidden !important;
+    }
+
+    // &-select__control--menu-is-open {
+    //   transition: 0.5s !important;
+    // }
+
+    &-select__menu {
+      // position: absolute !important;
+      // top: -283px !important;
+      // pointer-events: none;
+      background: transparent !important;
+      backdrop-filter: blur(25px) !important;
+      border-radius: 20px !important;
+      width: 411px !important;
+      height: 352px !important;
+      overflow: hidden !important;
+
+      &:hover {
+        cursor: pointer !important;
+      }
+    }
+
+    &-select__indicator-separator {
+      display: none !important;
+    }
+
+    &-select__placeholder {
       // font-family: "Circe";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 27px;
-      color: #bdbdbd;
+      font-style: normal !important;
+      font-weight: 400 !important;
+      font-size: 18px !important;
+      line-height: 27px !important;
+      color: #bdbdbd !important;
     }
 
     &__wrapper {
@@ -224,7 +266,6 @@
       width: 300px;
       height: 50px;
       border-radius: 20px;
-
       cursor: pointer;
     }
 
@@ -264,6 +305,26 @@
     &__button-add:hover {
       box-shadow: 0 0px 20px 0px rgba(0, 0, 0, 0.2);
       opacity: 0.6;
+    }
+
+    &__button-close {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      border: none;
+      border-radius: 50%;
+      background-image: url(../../image/SVG/ModalButtonClose.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: transparent;
+      top: 20px;
+      right: 20px;
+      transition: 200ms;
+    }
+
+    &__button-close:hover {
+      cursor: pointer;
+      filter: drop-shadow(0 0 10px rgba(0, 0, 0, 1));
     }
   }
 }

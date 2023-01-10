@@ -87,25 +87,11 @@ const ModalAddTransaction = ({ active, setActive }) => {
                     </div>
 
                     <Select
+                      className="modal-select-container"
+                      classNamePrefix="modal-select"
                       options={selectOptions}
-                      className="modal__select"
                       placeholder="Выберите категорию"
                     />
-
-                    {/* <select
-                      className="modal__select"
-                      placeholder="Выберите категорию"
-                      name="category"
-                    >
-                      <option value="Основной">Основной</option>
-                      <option value="Еда">Еда</option>
-                      <option value="Авто">Авто</option>
-                      <option value="Развитие">Развитие</option>
-                      <option value="Дети">Дети</option>
-                      <option value="Дом">Дом</option>
-                      <option value="Образование">Образование</option>
-                      <option value="Остальное">Остальное</option>
-                    </select> */}
 
                     <div className="modal__wrapper">
                       <input
@@ -135,6 +121,12 @@ const ModalAddTransaction = ({ active, setActive }) => {
                     >
                       Отмена
                     </button>
+
+                    <button
+                      type="button"
+                      className="modal__button-close"
+                      onClick={() => setActive(false)}
+                    ></button>
                   </form>
                 </div>
               </div>
