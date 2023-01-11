@@ -37,11 +37,173 @@ const ModalAddTransaction = ({ active, setActive }) => {
         <Fragment>
           {
             // Media screen and (min-width: 320px) and (max-width: 767px)
-            matches.small && <div></div>
+            matches.small && (
+              <div
+                className={active ? "modal active" : "modal"}
+                onClick={() => setActive(false)}
+              >
+                <div
+                  className="modal__content"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <form className="modal__form" onSubmit={onSubmitForm}>
+                    <p className="modal__title">Добавить транзакцию</p>
+
+                    <div className="modal__switch">
+                      {/* По-умолчанию выбран тип "Расход" */}
+                      <label>
+                        <span
+                          className={
+                            checked
+                              ? "modal__profit--checked"
+                              : "modal__unchecked"
+                          }
+                        >
+                          Доход
+                        </span>
+                        <input
+                          type="checkbox"
+                          checked={checked}
+                          onChange={() => setChecked(!checked)}
+                        />
+                        <span
+                          className={
+                            !checked
+                              ? "modal__unprofit--checked"
+                              : "modal__unchecked"
+                          }
+                        >
+                          Расход
+                        </span>
+                      </label>
+                    </div>
+
+                    <Select
+                      className="modal-select-container"
+                      classNamePrefix="modal-select"
+                      options={selectOptions}
+                      placeholder="Выберите категорию"
+                    />
+
+                    <input
+                      className="modal__pay"
+                      type="text"
+                      placeholder="0.00"
+                    />
+                    <Datetime
+                      inputProps={{ className: "modal__calendar" }}
+                      // value={date}
+                    />
+
+                    <input
+                      className="modal__comment"
+                      type="text"
+                      placeholder="Комментарий"
+                    />
+
+                    <button type="submit" className="modal__button-add">
+                      Добавить
+                    </button>
+                    <button
+                      type="button"
+                      className="modal__button-cancel"
+                      onClick={() => setActive(false)}
+                    >
+                      Отмена
+                    </button>
+                  </form>
+                </div>
+              </div>
+            )
           }
           {
             // Media screen and (min-width: 768px) and (max-width: 1199px)
-            matches.medium && <></>
+            matches.medium && (
+              <div
+                className={active ? "modal active" : "modal"}
+                onClick={() => setActive(false)}
+              >
+                <div
+                  className="modal__content"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <form className="modal__form" onSubmit={onSubmitForm}>
+                    <p className="modal__title">Добавить транзакцию</p>
+
+                    <div className="modal__switch">
+                      {/* По-умолчанию выбран тип "Расход" */}
+                      <label>
+                        <span
+                          className={
+                            checked
+                              ? "modal__profit--checked"
+                              : "modal__unchecked"
+                          }
+                        >
+                          Доход
+                        </span>
+                        <input
+                          type="checkbox"
+                          checked={checked}
+                          onChange={() => setChecked(!checked)}
+                        />
+                        <span
+                          className={
+                            !checked
+                              ? "modal__unprofit--checked"
+                              : "modal__unchecked"
+                          }
+                        >
+                          Расход
+                        </span>
+                      </label>
+                    </div>
+
+                    <Select
+                      className="modal-select-container"
+                      classNamePrefix="modal-select"
+                      options={selectOptions}
+                      placeholder="Выберите категорию"
+                    />
+
+                    <div className="modal__wrapper">
+                      <input
+                        className="modal__pay"
+                        type="text"
+                        placeholder="0.00"
+                      />
+                      <Datetime
+                        inputProps={{ className: "modal__calendar" }}
+                        // value={date}
+                      />
+                    </div>
+
+                    <input
+                      className="modal__comment"
+                      type="text"
+                      placeholder="Комментарий"
+                    />
+
+                    <button type="submit" className="modal__button-add">
+                      Добавить
+                    </button>
+                    <button
+                      type="button"
+                      className="modal__button-cancel"
+                      onClick={() => setActive(false)}
+                    >
+                      Отмена
+                    </button>
+
+                    <button
+                      type="button"
+                      className="modal__button-close"
+                      onClick={() => setActive(false)}
+                    ></button>
+                  </form>
+                </div>
+              </div>
+            )
           }
           {
             // Media screen and (min-width: 1200px)

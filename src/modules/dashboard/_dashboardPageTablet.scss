@@ -23,5 +23,25 @@
       bottom: 0;
       z-index: -1;
     }
+
+    &__modalButton {
+      position: absolute;
+      background: transparent;
+      right: 40px;
+      bottom: 40px;
+      width: 44px;
+      height: 44px;
+      background-image: url(../../image/SVG/ModalButtonAdd.svg);
+      background-repeat: no-repeat;
+      background-position: -15px -10px;
+      border: none;
+      border-radius: 50%;
+      transition: 100ms;
+    }
+
+    &__modalButton:hover {
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      cursor: pointer;
+    }
   }
 }

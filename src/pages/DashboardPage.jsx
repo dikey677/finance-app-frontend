@@ -26,6 +26,17 @@ const DashboardPage = () => {
               <div className="db">
                 <Header />
                 <Navigation />
+
+                <button
+                  type="button"
+                  className="db__modalButton"
+                  onClick={() => setModalActive(true)}
+                ></button>
+
+                {/* <ModalAddTransaction
+                  active={modalActive}
+                  setActive={setModalActive}
+                /> */}
               </div>
             )
           }
@@ -37,6 +48,17 @@ const DashboardPage = () => {
                 <Navigation />
                 <EllipsePurple className="db__ellipsePurple" />
                 <EllipseСoral className="db__ellipseCoral" />
+
+                <button
+                  type="button"
+                  className="db__modalButton"
+                  onClick={() => setModalActive(true)}
+                ></button>
+
+                <ModalAddTransaction
+                  active={modalActive}
+                  setActive={setModalActive}
+                />
               </div>
             )
           }
@@ -54,6 +76,7 @@ const DashboardPage = () => {
                   className="db__modalButton"
                   onClick={() => setModalActive(true)}
                 ></button>
+
                 <ModalAddTransaction
                   active={modalActive}
                   setActive={setModalActive}
