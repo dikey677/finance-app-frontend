@@ -33,10 +33,10 @@ const DashboardPage = () => {
                   onClick={() => setModalActive(true)}
                 ></button>
 
-                {/* <ModalAddTransaction
+                <ModalAddTransaction
                   active={modalActive}
                   setActive={setModalActive}
-                /> */}
+                />
               </div>
             )
           }

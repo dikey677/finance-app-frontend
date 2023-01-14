@@ -95,7 +95,7 @@ const ModalAddTransaction = ({ active, setActive }) => {
                       // value={date}
                     />
 
-                    <input
+                    <textarea
                       className="modal__comment"
                       type="text"
                       placeholder="Комментарий"

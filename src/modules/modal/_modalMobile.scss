@@ -1,16 +1,12 @@
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .modal {
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 60px;
+    left: -1px;
 
     display: flex;
     align-items: center;
     justify-content: center;
-
-    height: 568px;
-    width: 320px;
-    background-color: rgba(0, 0, 0, 0.25);
 
     opacity: 0;
     pointer-events: none;
@@ -18,11 +14,12 @@
 
     &__title {
       // font-family: "Poppins";
+      width: 280px;
+      height: 31px;
       font-style: normal;
       font-weight: 400;
-      font-size: 30px;
-      line-height: 45px;
-      display: flex;
+      font-size: 24px;
+      line-height: 36px;
       align-items: center;
       text-align: center;
       color: #000000;
@@ -37,9 +34,8 @@
       position: relative;
       padding: 40px 64px 60px 66px;
       width: 320px;
-      height: 600px;
+      height: 691px;
       background: #ffffff;
-      border-radius: 20px;
     }
 
     &__form {
@@ -51,7 +47,7 @@
 
     &__switch {
       margin-top: 40px;
-      width: 200px;
+      width: 220px;
       height: 44px;
       display: flex;
       align-items: center;
@@ -139,7 +135,7 @@
     &-select__control {
       position: relative !important;
       margin-top: 40px;
-      width: 410px;
+      width: 280px;
       height: 34px;
 
       border: none !important;
@@ -160,10 +156,6 @@
       box-shadow: none !important;
       overflow: hidden !important;
     }
-
-    // &-select__control--menu-is-open {
-    //   transition: 0.5s !important;
-    // }
 
     &-select__menu {
       // position: absolute !important;
@@ -192,6 +184,7 @@
       font-size: 18px !important;
       line-height: 27px !important;
       color: #bdbdbd !important;
+      padding: 0 10px !important;
     }
 
     &-select__input-container {
@@ -208,12 +201,14 @@
 
     &__comment {
       margin-top: 40px;
-      width: 410px;
-      height: 34px;
+      width: 280px;
+      height: 74px;
       outline: transparent;
       border: none;
       border-bottom: 1px solid #e0e0e0;
-      padding: 20px 10px;
+      padding: 0 20px;
+      resize: none;
+      box-sizing: border-box;
 
       &::placeholder {
         // font-family: "Circe";
@@ -226,15 +221,16 @@
     }
 
     &__pay {
-      width: 190px;
+      width: 280px;
       height: 34px;
       outline: transparent;
       border: none;
       border-bottom: 1px solid #e0e0e0;
-      padding: 20px 10px;
+      padding: 0 20px;
+      margin-top: 40px;
 
       &::placeholder {
-        text-align: center;
+        // text-align: center;
         // font-family: "Circe";
         font-style: normal;
         font-weight: 700;
@@ -246,15 +242,15 @@
 
     &__calendar {
       position: relative;
-      width: 190px;
+      width: 280px;
       height: 34px;
       background-image: url(../../image/SVG/Calendar.svg);
       background-repeat: no-repeat;
-      background-position: 150px 5px;
+      background-position: 240px 8px;
       outline: transparent;
       border: none;
       border-bottom: 1px solid #e0e0e0;
-
+      margin-top: 40px;
       // font-family: "Circe";
       font-style: normal;
       font-weight: 400;
