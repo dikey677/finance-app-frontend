@@ -1,9 +1,9 @@
-import Chart from "./Chart";
+import Balance from "./Balance";
 
 const HomeTab = () => {
   return (
     <div className="home">
-      <Chart />
+      <Balance />
     </div>
   );
 };

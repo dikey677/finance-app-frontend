@@ -7,6 +7,7 @@ import { Link, Routes, Route, Outlet } from "react-router-dom";
 import CurrencyComponent from "../components/Currency";
 import HomeTab from "../components/HomeTab";
 import Table from "../components/Table";
+import Chart from "../components/Chart";
 import React, { Fragment } from "react";
 import Media from "react-media";
 
@@ -52,7 +53,7 @@ const Navigation = () => {
 
                   <Routes>
                     <Route path="home" element={<HomeTab />} />
-                    <Route path="currency" element={<CurrencyComponent />} />
+                    <Route path="diagram" element={<Chart />} />
                   </Routes>
 
                   <Outlet />
@@ -93,7 +94,7 @@ const Navigation = () => {
                   </div>
                   <Routes>
                     <Route path="home" element={<Table />} />
-                    {/* <Route path="currency" element={<CurrencyComponent />} /> */}
+                    <Route path="diagram" element={<Chart />} />
                   </Routes>
                   <Outlet />
                 </>
@@ -131,7 +132,7 @@ const Navigation = () => {
                     <div className="nav-linkPage">
                       <Routes>
                         <Route path="home" element={<Table />} />
-                        {/* <Route path="currency" element={<CurrencyComponent />} /> */}
+                        <Route path="diagram" element={<Chart />} />
                       </Routes>
                       <Outlet />
                     </div>

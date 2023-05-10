@@ -1,9 +1,38 @@
-import Table from "./Table";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import { Doughnut } from "react-chartjs-2";
 import React, { Fragment } from "react";
 import Media from "react-media";
 
-const Chart = () => {
+ChartJS.register(ArcElement, Tooltip, Legend);
+
+const ChartDoughnut = () => {
+  const data = {
+    // labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+
+    datasets: [
+      {
+        // label: "# of Votes",
+        data: [12, 19, 3, 5, 2, 3, 8, 10, 3],
+        backgroundColor: [
+          "#FED057",
+          "#FFD8D0",
+          "#FD9498",
+          "#C5BAFF",
+          "#6E78E8",
+          "#4A56E2",
+          "#81E1FF",
+          "#24CCA7",
+          "#00AD84",
+        ],
+
+        borderWidth: 0,
+      },
+    ],
+  };
+
   return (
+    // <Doughnut data={data} style={{ width: "320px", height: "320px" }} />;
+
     <>
       <Media
         queries={{
@@ -15,16 +44,16 @@ const Chart = () => {
         {(matches) => (
           <Fragment>
             {
-              // Media screen and (min-width: 320px) and (max-width: 767px)c
+              // Media screen and (min-width: 320px) and (max-width: 767px)
               matches.small && (
                 <>
-                  <div className="chart">
-                    <p className="chart__title">Ваш баланс</p>
-                    <span className="chart__balance">₴ 24 000.00</span>
-                  </div>
-
-                  <div className="table">
-                    <Table />
+                  <div
+                    style={{
+                      width: "280px",
+                      height: "280px",
+                    }}
+                  >
+                    <Doughnut data={data} />
                   </div>
                 </>
               )
@@ -32,20 +61,31 @@ const Chart = () => {
             {
               // Media screen and (min-width: 768px) and (max-width: 1199px)
               matches.medium && (
-                <div className="chart">
-                  <p className="chart__title">Ваш баланс</p>
-                  <span className="chart__balance">₴ 24 000.00</span>
-                </div>
+                <>
+                  <div
+                    style={{
+                      width: "320px",
+                      height: "320px",
+                    }}
+                  >
+                    <Doughnut data={data} />
+                  </div>
+                </>
               )
             }
-
             {
-              // Media screen and (min-width: 1200px)
+              // Media screen and (min-width: 768px) and (max-width: 1199px)
               matches.large && (
-                <div className="chart">
-                  <p className="chart__title">Ваш баланс</p>
-                  <span className="chart__balance">₴ 24 000.00</span>
-                </div>
+                <>
+                  <div
+                    style={{
+                      width: "320px",
+                      height: "320px",
+                    }}
+                  >
+                    <Doughnut data={data} />
+                  </div>
+                </>
               )
             }
           </Fragment>
@@ -55,4 +95,4 @@ const Chart = () => {
   );
 };
 
-export default Chart;
+export default ChartDoughnut;
