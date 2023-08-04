@@ -77,13 +77,17 @@ const ChartDoughnut = () => {
               // Media screen and (min-width: 768px) and (max-width: 1199px)
               matches.large && (
                 <>
-                  <div
-                    style={{
-                      width: "320px",
-                      height: "320px",
-                    }}
-                  >
-                    <Doughnut data={data} />
+                  <div>
+                    <h1>Статистика</h1>
+                    <div
+                      style={{
+                        width: "320px",
+                        height: "320px",
+                      }}
+                    >
+                      <Doughnut data={data} />
+                    </div>
+                    <div></div>
                   </div>
                 </>
               )
