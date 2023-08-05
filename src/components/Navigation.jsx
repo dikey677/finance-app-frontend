@@ -54,6 +54,7 @@ const Navigation = () => {
                   <Routes>
                     <Route path="home" element={<HomeTab />} />
                     <Route path="diagram" element={<Chart />} />
+                    <Route path="currency" element={<CurrencyComponent />} />
                   </Routes>
 
                   <Outlet />

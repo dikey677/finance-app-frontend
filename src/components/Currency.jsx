@@ -123,7 +123,6 @@ const TableCurrency = ({ columns, data }) => {
             )}
             {matches.medium && (
               <>
-                {" "}
                 <table
                   {...getTableProps()}
                   style={{
@@ -222,7 +221,6 @@ const TableCurrency = ({ columns, data }) => {
             )}
             {matches.large && (
               <>
-                {" "}
                 <table
                   {...getTableProps()}
                   style={{
@@ -242,7 +240,6 @@ const TableCurrency = ({ columns, data }) => {
                       background: "#6e78e8",
                       height: "50px",
                       borderRadius: "30px 30px 0 0",
-
                       justifyContent: "space-between",
                     }}
                   >

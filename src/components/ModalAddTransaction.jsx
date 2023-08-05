@@ -1,9 +1,8 @@
 import Media from "react-media";
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import Datetime from "react-datetime";
 import "react-datetime/css/react-datetime.css";
 import Select from "react-select";
-import { useState } from "react";
 
 const ModalAddTransaction = ({ active, setActive }) => {
   const [checked, setChecked] = useState(false);

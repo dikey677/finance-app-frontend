@@ -1,13 +1,13 @@
 import Media from "react-media";
-import React, { Fragment, useState } from "react";
+import React, { Fragment } from "react";
 import Header from "../components/Header";
-import ModalAddTransaction from "../components/ModalAddTransaction";
+// import ModalAddTransaction from "../components/ModalAddTransaction";
 import Navigation from "../components/Navigation";
 import { ReactComponent as EllipsePurple } from "../image/SVG/EllipsePurple.svg";
 import { ReactComponent as EllipseСoral } from "../image/SVG/EllipseCoral.svg";
 
 const DashboardPage = () => {
-  const [modalActive, setModalActive] = useState(false);
+  // const [modalActive, setModalActive] = useState(false);
 
   return (
     <Media
@@ -25,17 +25,6 @@ const DashboardPage = () => {
               <div className="db">
                 <Header />
                 <Navigation />
-
-                <button
-                  type="button"
-                  className="db__modalButton"
-                  onClick={() => setModalActive(true)}
-                ></button>
-
-                <ModalAddTransaction
-                  active={modalActive}
-                  setActive={setModalActive}
-                />
               </div>
             )
           }
@@ -47,17 +36,6 @@ const DashboardPage = () => {
                 <Navigation />
                 <EllipsePurple className="db__ellipsePurple" />
                 <EllipseСoral className="db__ellipseCoral" />
-
-                <button
-                  type="button"
-                  className="db__modalButton"
-                  onClick={() => setModalActive(true)}
-                ></button>
-
-                <ModalAddTransaction
-                  active={modalActive}
-                  setActive={setModalActive}
-                />
               </div>
             )
           }
@@ -69,17 +47,6 @@ const DashboardPage = () => {
                 <Navigation />
                 <EllipsePurple className="db__ellipsePurple" />
                 <EllipseСoral className="db__ellipseCoral" />
-
-                <button
-                  type="button"
-                  className="db__modalButton"
-                  onClick={() => setModalActive(true)}
-                ></button>
-
-                <ModalAddTransaction
-                  active={modalActive}
-                  setActive={setModalActive}
-                />
               </div>
             )
           }

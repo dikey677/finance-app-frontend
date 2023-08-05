@@ -1,0 +1,21 @@
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .button-add {
+    position: absolute;
+    background: transparent;
+    right: 20px;
+    bottom: 30px;
+    width: 44px;
+    height: 44px;
+    background-image: url(../../image/SVG/ModalButtonAdd.svg);
+    background-repeat: no-repeat;
+    background-position: -15px -10px;
+    border: none;
+    border-radius: 50%;
+    transition: 100ms;
+  }
+
+  .button-add:hover {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    cursor: pointer;
+  }
+}

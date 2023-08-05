@@ -1,9 +1,8 @@
 @media screen and (min-width: 1200px) {
   .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-
+    position: absolute;
+    top: -180px;
+    left: -750px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -109,7 +108,7 @@
     }
 
     &__profit--checked {
-      // font-family: "Circe";
+      font-family: "Circe";
       font-style: normal;
       font-weight: 700;
       font-size: 16px;
@@ -118,7 +117,7 @@
     }
 
     &__unprofit--checked {
-      // font-family: "Circe";
+      font-family: "Circe";
       font-style: normal;
       font-weight: 700;
       font-size: 16px;
@@ -127,7 +126,7 @@
     }
 
     &__unchecked {
-      // font-family: 'Circe';
+      font-family: "Circe";
       font-style: normal;
       font-weight: 700;
       font-size: 16px;
@@ -181,7 +180,7 @@
     &-select__option {
       width: 411px !important;
       height: 44px !important;
-      // font-family: "Circe" !important;
+      font-family: "Circe" !important;
       font-style: normal !important;
       font-weight: 400 !important;
       font-size: 18px !important;
@@ -195,7 +194,7 @@
       &:hover {
         cursor: pointer !important;
         background-color: #ffffff !important;
-        // font-family: "Circe" !important;
+        font-family: "Circe" !important;
         font-style: normal !important;
         font-weight: 700 !important;
         font-size: 18px !important;
@@ -212,7 +211,7 @@
     }
 
     &-select__placeholder {
-      // font-family: "Circe";
+      font-family: "Circe";
       font-style: normal !important;
       font-weight: 400 !important;
       font-size: 18px !important;
@@ -242,7 +241,7 @@
       padding: 20px 10px;
 
       &::placeholder {
-        // font-family: "Circe";
+        font-family: "Circe";
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -261,7 +260,7 @@
 
       &::placeholder {
         text-align: center;
-        // font-family: "Circe";
+        font-family: "Circe";
         font-style: normal;
         font-weight: 700;
         font-size: 18px;
@@ -281,7 +280,7 @@
       border: none;
       border-bottom: 1px solid #e0e0e0;
 
-      // font-family: "Circe";
+      font-family: "Circe";
       font-style: normal;
       font-weight: 400;
       font-size: 18px;
@@ -303,7 +302,7 @@
       margin-top: 51px;
       border: 1px solid #24cca7;
       background: #24cca7;
-      // font-family: "Circe";
+      font-family: "Circe";
       font-style: normal;
       font-weight: 400;
       font-size: 18px;
@@ -319,7 +318,7 @@
       margin-top: 20px;
       background: transparent;
       border: 1px solid #4a56e2;
-      // font-family: 'Circe';
+      font-family: "Circe";
       font-style: normal;
       font-weight: 400;
       font-size: 18px;
