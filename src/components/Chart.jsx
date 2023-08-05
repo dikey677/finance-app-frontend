@@ -2,6 +2,7 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
 import React, { Fragment } from "react";
 import Media from "react-media";
+import TableStat from "./TableStat";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -47,13 +48,13 @@ const ChartDoughnut = () => {
               // Media screen and (min-width: 320px) and (max-width: 767px)
               matches.small && (
                 <>
-                  <div
-                    style={{
-                      width: "280px",
-                      height: "280px",
-                    }}
-                  >
-                    <Doughnut data={data} />
+                  <div className="stat">
+                    <p className="stat__title">Статистика</p>
+                    <div className="stat__doughnut">
+                      <Doughnut data={data} />
+                    </div>
+
+                    <TableStat />
                   </div>
                 </>
               )

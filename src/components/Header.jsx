@@ -2,8 +2,9 @@ import Media from "react-media";
 import React, { Fragment } from "react";
 
 import { ReactComponent as Logout } from "../image/SVG/Exit.svg";
-import { ReactComponent as Wallet } from "../image/SVG/Wallet.svg";
-import { ReactComponent as WalletDesktop } from "../image/SVG/Wallet40x40.svg";
+import { ReactComponent as LogoMobile } from "../image/SVG/LogoMobile.svg";
+import { ReactComponent as LogoTablet } from "../image/SVG/Wallet.svg";
+import { ReactComponent as LogoDesktop } from "../image/SVG/Wallet40x40.svg";
 
 const Header = () => {
   return (
@@ -22,12 +23,11 @@ const Header = () => {
               <div className="header">
                 <div className="header__wallet">
                   <span className="header__logo">
-                    <Wallet />
+                    <LogoMobile />
                   </span>
-                  <h2 className="header__title">Wallet</h2>
                 </div>
                 <div className="header__user">
-                  <p className="header__name">Имя</p>
+                  <p className="header__user-name">Имя</p>
                   <button type="submit" className="header__logout">
                     <Logout />
                   </button>
@@ -41,7 +41,7 @@ const Header = () => {
               <div className="header">
                 <div className="header__wallet">
                   <span className="header__logo">
-                    <Wallet />
+                    <LogoTablet />
                   </span>
                   <h2 className="header__title">Wallet</h2>
                 </div>
@@ -63,7 +63,7 @@ const Header = () => {
               <div className="header">
                 <div className="header__wallet">
                   <span className="header__logo">
-                    <WalletDesktop />
+                    <LogoDesktop />
                   </span>
                   <h2 className="header__title">Wallet</h2>
                 </div>

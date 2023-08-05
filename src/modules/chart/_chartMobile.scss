@@ -1,0 +1,19 @@
+.stat {
+  &__title {
+    color: #000;
+    text-align: left;
+    //   font-family: "Poppins";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    margin: 40px 20px 10px 20px;
+  }
+
+  &__doughnut {
+    margin: 0 auto;
+    width: 280px;
+    height: 280px;
+  }
+}

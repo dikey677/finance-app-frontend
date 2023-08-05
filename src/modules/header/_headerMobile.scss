@@ -11,42 +11,27 @@
     top: 0;
     left: -1px;
 
-    &__wallet {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    &__logo {
-      width: 30px;
-      height: 30px;
-    }
-
-    &__title {
-      color: #000000;
-      margin-left: 16px;
-    }
-
     &__user {
       display: flex;
-      align-items: center;
+      // align-items: center;
       justify-content: right;
       width: 80px;
       height: 24px;
-      left: 192px;
-      top: 18px;
-      // font-family: "Circe";
+    }
+
+    &__user-name {
+      margin: 0;
+      color: var(--gray-4, #bdbdbd);
+      text-align: right;
+      vertical-align: bottom;
+      font-family: Circe;
+      font-size: 18px;
       font-style: normal;
       font-weight: 400;
-      font-size: 18px;
-      line-height: 27px;
-      text-align: right;
-      color: #bdbdbd;
+      line-height: normal;
     }
 
     &__logout {
-      width: 18px;
-      height: 18px;
       border: none;
       fill: #bdbdbd;
       background-color: transparent;

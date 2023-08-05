@@ -25,7 +25,6 @@ const TableCurrency = ({ columns, data }) => {
           <Fragment>
             {matches.small && (
               <>
-                {" "}
                 <table
                   {...getTableProps()}
                   style={{

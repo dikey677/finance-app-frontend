@@ -1,11 +1,10 @@
 import Media from "react-media";
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import Header from "../components/Header";
 import ModalAddTransaction from "../components/ModalAddTransaction";
 import Navigation from "../components/Navigation";
 import { ReactComponent as EllipsePurple } from "../image/SVG/EllipsePurple.svg";
 import { ReactComponent as EllipseСoral } from "../image/SVG/EllipseCoral.svg";
-import { useState } from "react";
 
 const DashboardPage = () => {
   const [modalActive, setModalActive] = useState(false);
